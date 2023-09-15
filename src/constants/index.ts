@@ -9,12 +9,3 @@ export const NavLinks = [
     { title: "Lecturers", path: "/dashboard/lecturers", icon: "BsFillPersonFill" },
     { title: "Clubs", path: "/dashboard/clubs", icon: "MdPeopleAlt" },
 ]
-
-export const clubInputFields = [
-    { name: 'username', placeholder: 'Username' },
-    { name: 'name', placeholder: 'Club Name' },
-    { name: 'about', placeholder: 'About the Club' },
-    { name: 'email', placeholder: 'Email' },
-    { name: 'inCharge', placeholder: 'In-Charge' },
-    { name: 'president', placeholder: 'President' },
-];
