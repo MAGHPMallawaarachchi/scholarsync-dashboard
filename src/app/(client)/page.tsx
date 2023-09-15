@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import Container from "@/components/Container";
 import signIn from "../(server)/firebase/auth/authentification";
 
-function Page() {
+export default function Home() {
     const [email, setEmail] = React.useState('')
     const [password, setPassword] = React.useState('')
     const router = useRouter()
@@ -66,5 +66,3 @@ function Page() {
         </Container>
     );
 }
-
-export default Page;

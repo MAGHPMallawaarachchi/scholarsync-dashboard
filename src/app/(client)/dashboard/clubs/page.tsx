@@ -1,5 +1,4 @@
 'use client'
-
 import React from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -7,8 +6,8 @@ import Header from "@/components/Header";
 import ClubTable from "@/components/ClubTable";
 import { useAuthContext } from "@/app/(server)/context/AuthContext";
 
-function Page() {
-    const { user } = useAuthContext() as any
+const Clubs = () => {
+    const user = useAuthContext()
     const router = useRouter()
 
     React.useEffect(() => {
@@ -23,4 +22,4 @@ function Page() {
     );
 }
 
-export default Page;
+export default Clubs

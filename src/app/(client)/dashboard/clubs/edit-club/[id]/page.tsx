@@ -1,10 +1,9 @@
 'use client'
-
+import React from 'react'
 import { getClubById } from '@/app/(server)/firebase/club.firestore'
 import Club from '@/app/(server)/models/Club'
 import Form from '@/components/Form'
 import Modal from '@/components/Modal'
-import React, {  } from 'react'
 
 const EditClub = async ({ params: { id } }: { params: { id: string } }) => {
 

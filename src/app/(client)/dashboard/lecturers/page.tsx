@@ -3,8 +3,8 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { useAuthContext } from "@/app/(server)/context/AuthContext";
 
-function Page() {
-    const { user } = useAuthContext() as any
+const Lecturers = () => {
+    const user = useAuthContext()
     const router = useRouter()
 
     React.useEffect(() => {
@@ -16,4 +16,4 @@ function Page() {
     );
 }
 
-export default Page;
+export default Lecturers

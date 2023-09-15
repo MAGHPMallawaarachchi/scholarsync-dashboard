@@ -3,7 +3,7 @@ import React from "react";
 import { useAuthContext } from "@/app/(server)/context/AuthContext";
 import { useRouter } from "next/navigation";
 
-function Page() {
+export default function Dashboard() {
     const user = useAuthContext()
     const router = useRouter()
 
@@ -15,5 +15,3 @@ function Page() {
         <h1>Only logged in users can view this dashboard page</h1>
     );
 }
-
-export default Page;

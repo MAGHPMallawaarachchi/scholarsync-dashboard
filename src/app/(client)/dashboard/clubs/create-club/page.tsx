@@ -6,8 +6,8 @@ import Modal from "@/components/Modal";
 import Form from "@/components/Form";
 import { useAuthContext } from "@/app/(server)/context/AuthContext";
 
-function CreateClub() {
-    const { user } = useAuthContext() as any
+const CreateClub = () => {
+    const user = useAuthContext()
     const router = useRouter()
 
     React.useEffect(() => {
@@ -24,4 +24,4 @@ function CreateClub() {
     )
 }
 
-export default CreateClub;
+export default CreateClub
