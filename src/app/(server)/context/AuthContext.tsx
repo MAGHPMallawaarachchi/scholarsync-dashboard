@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import {
     onAuthStateChanged,
-    getAuth,
 } from 'firebase/auth';
 import { auth } from '../firebase/config';
 
