@@ -11,7 +11,7 @@ import {
     deleteDoc,
   } from 'firebase/firestore';
 import Lecture from '@/app/(server)/models/Lecture';
-import { firestore } from './config';
+import { firestore } from '../config';
   
   // Create a new lecture
   export async function createLecture(lecture: Lecture): Promise<void> {

@@ -1,9 +1,10 @@
 export default interface Lecturer {
-    id?: string,
+    image: string,
+    id: string,
     name: string,
     email: string,
     phone: string,
     department: string,
-    profileImageURL: string,
     faculty: string,
+    profileImageURL: string,
 }
