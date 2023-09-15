@@ -1,7 +1,7 @@
-import firebase_app from "../config";
-import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, signOut} from 'firebase/auth';
+import firebase_app from '../config';
 
-const auth = getAuth(firebase_app);
+export const auth = getAuth(firebase_app);
 
 export default async function signIn(email: string, password: string) {
     let result = null,
@@ -14,3 +14,5 @@ export default async function signIn(email: string, password: string) {
 
     return { result, error };
 }
+
+export const logOut = () => signOut(auth);

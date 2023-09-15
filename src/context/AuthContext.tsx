@@ -1,13 +1,13 @@
+'use client'
+
 import React, { ReactNode } from 'react';
 import {
     onAuthStateChanged,
     getAuth,
     User,
-} from 'firebase/auth'; // Import the User type from Firebase
+} from 'firebase/auth';
+import { auth } from '@/firebase/auth/authentification';
 
-import firebase_app from '@/firebase/config';
-
-const auth = getAuth(firebase_app);
 
 export const AuthContext = React.createContext({});
 
