@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
-import { useAuthContext } from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
+import { useAuthContext } from "@/app/(server)/context/AuthContext";
 
 function Page() {
     const { user } = useAuthContext() as any
@@ -12,7 +12,7 @@ function Page() {
     }, [user])
 
     return (
-        <h1>Only logged in users can view this page</h1>
+        <h1 className="text-2xl text-white">lecturers</h1>
     );
 }
 

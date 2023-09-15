@@ -1,7 +1,7 @@
 export default interface Club {
     image: string;
-    id?: string,
-    username: string,
+    id: string,
+    uid: string,
     name: string,
     about: string,
     email: string,

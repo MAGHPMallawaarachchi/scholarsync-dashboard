@@ -11,7 +11,7 @@ import {
     deleteDoc,
   } from 'firebase/firestore';
 
-import Lecturer from '@/models/Lecturer';
+import Lecturer from '@/app/(server)/models/Lecturer';
 import { firestore } from './config';
   
   

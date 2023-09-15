@@ -10,7 +10,7 @@ import {
     updateDoc,
     deleteDoc,
   } from 'firebase/firestore';
-import Lecture from '@/models/Lecture';
+import Lecture from '@/app/(server)/models/Lecture';
 import { firestore } from './config';
   
   // Create a new lecture

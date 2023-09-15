@@ -1,8 +1,8 @@
 'use client'
 import React from "react";
-import signIn from "@/firebase/auth/authentification";
 import { useRouter } from 'next/navigation'
 import Container from "@/components/Container";
+import signIn from "../(server)/firebase/auth/authentification";
 
 function Page() {
     const [email, setEmail] = React.useState('')
