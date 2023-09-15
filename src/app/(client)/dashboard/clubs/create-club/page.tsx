@@ -3,7 +3,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import Modal from "@/components/Modal";
-import Form from "@/components/Form";
+import Form from "@/components/ClubForm";
 import { useAuthContext } from "@/app/(server)/context/AuthContext";
 
 const CreateClub = () => {

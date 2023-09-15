@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Club from '@/app/(server)/models/Club';
 import { AiFillEdit } from 'react-icons/ai';
 import { MdDelete } from 'react-icons/md';
-import { deleteClubById, getAllClubs } from '@/app/(server)/firebase/club.firestore';
+import { deleteClubById, getAllClubs } from '@/app/(server)/firebase/firestore/club.firestore';
 import Link from 'next/link';
 
 const ClubTable = () => {

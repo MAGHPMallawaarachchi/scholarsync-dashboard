@@ -5,7 +5,7 @@ import React, { ChangeEvent, useState } from "react";
 import FormField from "./FormField";
 import Button from "./Button";
 import Club from "@/app/(server)/models/Club";
-import { createClubAsUser, updateClubById } from "@/app/(server)/firebase/club.firestore";
+import { createClubAsUser, updateClubById } from "@/app/(server)/firebase/firestore/club.firestore";
 import { AiFillPlusCircle } from "react-icons/ai";
 
 type Props = {
@@ -13,7 +13,7 @@ type Props = {
     club?: Club;
 }
 
-const ProjectForm = ({ type, club }: Props) => {
+const ClubForm = ({ type, club }: Props) => {
 
     const [profileImageFile, setProfileImageFile] = useState<File>(new File([], ''));
     const [isImageSelected, setIsImageSelected] = useState(false);
@@ -43,6 +43,7 @@ const ProjectForm = ({ type, club }: Props) => {
                         inCharge: "",
                         president: "",
                         profileImageURL: "",
+                        password: "",
                     });
 
                      // Reset the selected image
@@ -54,7 +55,7 @@ const ProjectForm = ({ type, club }: Props) => {
                 }
             }             
             if (type === "edit") {
-                await updateClubById(club?.id as string, form);
+                await updateClubById(form, club as Club, profileImageFile);
                 alert("Club updated successfully!");
             }
         } catch (error) {
@@ -106,6 +107,7 @@ const ProjectForm = ({ type, club }: Props) => {
         inCharge: club?.inCharge || "",
         president: club?.president || "",
         profileImageURL: club?.profileImageURL || "",
+        password: "",
     });    
 
     return (
@@ -202,4 +204,4 @@ const ProjectForm = ({ type, club }: Props) => {
     )
 }
 
-export default ProjectForm;
+export default ClubForm;
