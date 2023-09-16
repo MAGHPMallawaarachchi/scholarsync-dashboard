@@ -76,3 +76,67 @@ body {
     @apply border-b-2 border-gray3 px-4 py-2 text-gray1 font-medium text-left;
   }
 }
+
+.rbc-header {
+  @apply border-none !important;
+}
+
+.rbc-time-view {
+  @apply border-none !important;
+}
+
+.rbc-today {
+  @apply bg-gray4 !important;
+}
+
+.rbc-events-container {
+  @apply border-none !important;
+}
+
+.rbc-time-content {
+  @apply border-none border-l-darkgray !important;
+}
+
+.rbc-time-slot{
+  @apply border-gray3 !important;
+}
+
+.rbc-toolbar button {
+  @apply text-gray1 border-gray3 !important;
+}
+
+.rbc-toolbar button.rbc-active {
+  @apply bg-secondarygreen !important;
+}
+
+.rbc-toolbar button:hover{
+  @apply bg-gray4 !important;
+}
+
+.rbc-toolbar button:active{
+  @apply bg-secondarygreen !important;
+}
+
+.rbc-toolbar button:focus{
+  @apply bg-secondarygreen !important;
+}
+
+.rbc-row{
+  @apply border-none !important;
+}
+
+.rbc-time-content > * + * > * {
+  border-left: 1.5px solid #E4E6EB !important;
+}
+
+.rbc-toolbar{
+  @apply mb-5 !important;
+}
+
+.rbc-event{
+  @apply bg-secondarygreen !important;
+}
+
+.rbc-event-content{
+  @apply pt-2 leading-6 !important;
+}

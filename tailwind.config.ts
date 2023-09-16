@@ -15,6 +15,7 @@ const config: Config = {
       gray1: "#E4E6EB",
       gray2: "#B0B3B8",
       gray3: "#3A3B3C",
+      gray4: "#323335",
 
       darkgray: "#3A3F47",
       textblack: "#181818",
@@ -27,4 +28,4 @@ const config: Config = {
   },
   plugins: [],
 }
-export default config
+export default config;

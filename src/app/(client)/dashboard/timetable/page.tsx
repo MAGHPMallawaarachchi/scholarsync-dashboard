@@ -2,6 +2,8 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { useAuthContext } from "@/app/(server)/context/AuthContext";
+import Header from "@/components/Header";
+import CustomTimetable from "@/components/CustomTimetable";
 
 const Timetable = () => {
     const user = useAuthContext()
@@ -11,8 +13,15 @@ const Timetable = () => {
         if (user == null) router.push("/")
     }, [user])
 
+    const handleButtonClick = () => {
+        router.push("/dashboard/timetable/create-lecture"); 
+    };
+
     return (
-        <h1 className="text-2xl text-white">timetable</h1>
+        <div className="flex flex-col gap-8 mx-auto w-full">
+            <Header title="Timetable" buttonTitle="Add New Lecture" handleClick={handleButtonClick}/>
+            <CustomTimetable/>
+        </div>
     );
 }
 
