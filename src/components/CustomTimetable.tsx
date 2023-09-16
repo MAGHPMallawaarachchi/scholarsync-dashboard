@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import {
   Calendar as BigCalendar,
   momentLocalizer,
@@ -6,7 +7,8 @@ import {
 } from "react-big-calendar";
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import { events } from '@/constants';
+import { getAllLectures } from '@/app/(server)/firebase/firestore/lecture.firestore';
+import Button from './Button';
 
 moment.locale("en-GB");
 const localizer = momentLocalizer(moment);
@@ -36,8 +38,29 @@ const combinedStyles = {
   ...styles.timeSlot,
 };
 
-
 const CustomTimetable = () => {
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    async function fetchAndSetEvents() {
+      try {
+        const lectures = await getAllLectures();
+
+        const lectureEvents = lectures.map((lecture) => ({
+          start: moment(lecture.startTime).toDate(),
+          end: moment(lecture.endTime).toDate(),
+          title: `${lecture.moduleCode} ${lecture.batch} ${lecture.lecturer} ${lecture.lectureHall}`,
+        }));
+
+        setEvents(lectureEvents as any);
+      } catch (error) {
+        console.error('Error fetching lectures:', error);
+      }
+    }
+
+    fetchAndSetEvents();
+  }, []);
+  
   return (
     <div style={combinedStyles}>
       <BigCalendar
@@ -54,6 +77,7 @@ const CustomTimetable = () => {
         max={new Date(today.getFullYear(), today.getMonth(), today.getDate(), 17, 0, 0)}
       />
     </div>
+    
   );
 }
 
