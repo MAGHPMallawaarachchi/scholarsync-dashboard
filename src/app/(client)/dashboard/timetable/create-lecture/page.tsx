@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import React from 'react'
 
 const CreateLecture = () => {
-  const user = useAuthContext()
+    const user = useAuthContext()
     const router = useRouter()
 
     React.useEffect(() => {

@@ -8,7 +8,7 @@ import {
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import { getAllLectures } from '@/app/(server)/firebase/firestore/lecture.firestore';
-import Button from './Button';
+import Router from 'next/router';
 
 moment.locale("en-GB");
 const localizer = momentLocalizer(moment);
@@ -18,7 +18,7 @@ const today = new Date();
 const styles = {
   container: {
     width: "80wh",
-    height: "80vh",
+    height: "78vh",
   },
   calendar: {
     padding: "2em",
@@ -60,6 +60,10 @@ const CustomTimetable = () => {
 
     fetchAndSetEvents();
   }, []);
+
+  const handleEventClick = (event: { id: String; }) => {
+    Router.push(`/dashboard/timetable/edit-lecture/${event.id}`);
+  };
   
   return (
     <div style={combinedStyles}>
@@ -75,6 +79,7 @@ const CustomTimetable = () => {
         resourceTitleAccessor="resourceTitle"
         min={new Date(today.getFullYear(), today.getMonth(), today.getDate(), 9, 0, 0)}
         max={new Date(today.getFullYear(), today.getMonth(), today.getDate(), 17, 0, 0)}
+        onSelectEvent={handleEventClick}
       />
     </div>
     
