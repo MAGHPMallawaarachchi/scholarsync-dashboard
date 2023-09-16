@@ -89,12 +89,8 @@ body {
   @apply bg-gray4 !important;
 }
 
-.rbc-events-container {
-  @apply border-none !important;
-}
-
 .rbc-time-content {
-  @apply border-none border-l-darkgray !important;
+  @apply border-gray2 !important;
 }
 
 .rbc-time-slot{
@@ -126,7 +122,7 @@ body {
 }
 
 .rbc-time-content > * + * > * {
-  border-left: 1.5px solid #E4E6EB !important;
+  border-left: 1.5px solid #E4E6EB !important; 
 }
 
 .rbc-toolbar{
@@ -134,7 +130,7 @@ body {
 }
 
 .rbc-event{
-  @apply bg-secondarygreen !important;
+  @apply bg-secondarygreen border-secondarygreen !important;
 }
 
 .rbc-event-content{

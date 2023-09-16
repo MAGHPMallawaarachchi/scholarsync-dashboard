@@ -23,11 +23,9 @@ const styles = {
     backgroundColor: "#242526",
     color: "#E4E6EB",
     borderRadius: "20px",
-    borderColor: "#242526",
   },
   timeSlot: {
     background: "#242526",
-    borderColor: "#242526",
   },
   
 };
@@ -46,7 +44,7 @@ const CustomTimetable = () => {
         selectable
         localizer={localizer}
         events={events}
-        defaultView={Views.DAY}
+        defaultView={Views.WEEK}
         views={[Views.DAY, Views.WEEK, Views.MONTH]}
         step={30}
         defaultDate={today}
