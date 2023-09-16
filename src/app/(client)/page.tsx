@@ -39,7 +39,7 @@ export default function Home() {
                                 name="email"
                                 id="email"
                                 placeholder="example@mail.com"
-                                className="mt-1 p-2 w-full rounded-md bg-gray3"
+                                className="mt-1 p-2 w-full rounded-md bg-gray3 text-white"
                             />
                         </div>
                         <div className="mb-4">
@@ -53,7 +53,7 @@ export default function Home() {
                                 name="password"
                                 id="password"
                                 placeholder="password"
-                                className="mt-1 p-2 w-full rounded-md bg-gray3"
+                                className="mt-1 p-2 w-full rounded-md bg-gray3 text-white"
                             />
                         </div>
                         <button type="submit" className="w-full bg-secondarygreen text-white rounded-md py-2">
