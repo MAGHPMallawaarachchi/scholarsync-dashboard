@@ -76,7 +76,7 @@ const ClubTable = () => {
                 <Link href={`/dashboard/clubs/edit-club/${club.id}`}>
                   <button className='p-2'><AiFillEdit size='20'/></button>
                 </Link>
-                <button onClick={() => handleDeleteClub(club.id!)}><MdDelete size='20'/></button>
+                
               </td>
 
             </tr>

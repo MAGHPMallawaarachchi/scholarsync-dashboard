@@ -21,7 +21,7 @@ const Header = ({title, buttonTitle, handleClick}:Props) => {
     }, [user])
 
   return (
-    <div className='w-full flex justify-between'>
+    <div className='w-full flex justify-between items-center'>
         <h1 className="text-2xl font-semibold text-white">{title}</h1>
         <Button title={buttonTitle} leftIcon={<AiFillPlusCircle size="20" />} handleClick={handleClick}/>
     </div>

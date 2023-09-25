@@ -18,7 +18,7 @@ const Timetable = () => {
     };
 
     return (
-        <div className="flex flex-col gap-8 mx-auto w-full">
+        <div className="flex flex-col gap-8 ml-60">
             <Header title="Timetable" buttonTitle="Add New Lecture" handleClick={handleButtonClick}/>
             <CustomTimetable/>
         </div>

@@ -18,7 +18,7 @@ const Clubs = () => {
     };
 
     return (
-        <div className="flex flex-col gap-8 mx-auto w-full">
+        <div className="flex flex-col gap-8 ml-60">
             <Header title="Clubs" buttonTitle="Add New Club" handleClick={handleButtonClick}/>
             <ClubTable />
         </div>

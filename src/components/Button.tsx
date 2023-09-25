@@ -20,7 +20,7 @@ const Button = ({title, type, leftIcon, rightIcon, isSubmitting, handleClick, bg
         disabled={isSubmitting}
         className={`flex justify-center items-center gap-3 px-4 py-3 
         ${textColor || 'text-white'}
-        ${isSubmitting ? 'bg-black/50' : bgColor || 'bg-secondarygreen'} rounded-xl text-base font-medium max-md:w-full`}
+        ${isSubmitting ? 'bg-black/50' : bgColor || 'bg-secondarygreen'} rounded-xl text-sm font-medium max-md:w-full`}
         onClick={handleClick}
     >
         {leftIcon && leftIcon}

@@ -25,7 +25,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="flex h-screen bg-gray-900 text-white">
+    <div className="flex h-screen fixed bg-gray-900 text-white">
         <aside className="bg-primarygreen w-60 p-8 flex flex-col items-center justify-between">
             <div className='flex flex-col gap-16'>
               <Image

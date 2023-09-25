@@ -20,7 +20,7 @@ const Lecturers = () => {
     };
 
     return (
-        <div className="flex flex-col gap-8 mx-auto w-full">
+        <div className="flex flex-col gap-8 ml-60">
             <Header title="Lecturers" buttonTitle="Add New Lecturer" handleClick={handleButtonClick}/>
             <LecturerTable />
         </div>
